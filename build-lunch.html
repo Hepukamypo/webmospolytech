@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Собрать ланч — GreenBowl</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssmain.css">
+	<link rel="stylesheet" href="csslunch.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">GreenBowl</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">О нас</a>
+                <a href="build-lunch.html" class="nav-link active">Собрать ланч</a>
+                <a href="#orders" class="nav-link">Заказы</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Супы -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Выберите суп</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card">
+                        <img src="tomatosup.jpg" alt="Томатный суп" class="dish-image">
+                        <p class="dish-price">195₽</p>
+                        <p class="dish-name">Томатный суп с базиликом</p>
+                        <p class="dish-weight">350 г</p>
+                        <button class="dish-button">Добавить</button>
+                    </div>
+                    <div class="dish-card">
+                        <img src="mashroomssup.jpg" alt="Грибной суп-пюре" class="dish-image">
+                        <p class="dish-price">185₽</p>
+                        <p class="dish-name">Грибной суп-пюре (веганский)</p>
+                        <p class="dish-weight">330 г</p>
+                        <button class="dish-button">Добавить</button>
+                    </div>
+                    <div class="dish-card">
+                        <img src="kinua.jpg" alt="Норвежский суп" class="dish-image">
+                        <p class="dish-price">270₽</p>
+                        <p class="dish-name">Норвежский суп с киноа</p>
+                        <p class="dish-weight">330 г</p>
+                        <button class="dish-button">Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Главные блюда -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Выберите главное блюдо</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card">
+                        <img src="potato.jpg" alt="Жареная картошка с грибами" class="dish-image">
+                        <p class="dish-price">150₽</p>
+                        <p class="dish-name">Жареная картошка с шампиньонами</p>
+                        <p class="dish-weight">250 г</p>
+                        <button class="dish-button">Добавить</button>
+                    </div>
+                    <div class="dish-card">
+                        <img src="lz.jpg" alt="Лазанья" class="dish-image">
+                        <p class="dish-price">385₽</p>
+                        <p class="dish-name">Веганская лазанья с тофу и соусом</p>
+                        <p class="dish-weight">310 г</p>
+                        <button class="dish-button">Добавить</button>
+                    </div>
+                    <div class="dish-card">
+                        <img src="fl.jpg" alt="Фалафель" class="dish-image">
+                        <p class="dish-price">225₽</p>
+                        <p class="dish-name">Фалафель с картофельным пюре</p>
+                        <p class="dish-weight">280 г</p>
+                        <button class="dish-button">Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Напитки -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Выберите напиток</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card">
+                        <img src="ap.jpg" alt="Апельсиновый сок" class="dish-image">
+                        <p class="dish-price">120₽</p>
+                        <p class="dish-name">Апельсиновый сок</p>
+                        <p class="dish-weight">300 мл</p>
+                        <button class="dish-button">Добавить</button>
+                    </div>
+                    <div class="dish-card">
+                        <img src="app.jpg" alt="Яблочный сок" class="dish-image">
+                        <p class="dish-price">90₽</p>
+                        <p class="dish-name">Яблочный сок</p>
+                        <p class="dish-weight">300 мл</p>
+                        <button class="dish-button">Добавить</button>
+                    </div>
+                    <div class="dish-card">
+                        <img src="mr.jpg" alt="Морковный сок" class="dish-image">
+                        <p class="dish-price">110₽</p>
+                        <p class="dish-name">Морковный сок</p>
+                        <p class="dish-weight">300 мл</p>
+                        <button class="dish-button">Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма заказа -->
+        <section class="section order-section">
+            <div class="container">
+                <h2 class="section-title">Оформить заказ</h2>
+                <form action="https://httpbin.org/post" method="POST" class="order-form">
+                    <div class="form-grid">
+                        <div class="form-column">
+                            <h3 class="form-title">Ваш заказ</h3>
+                            <div class="form-group">
+                                <label for="soup" class="form-label">Выберите суп:</label>
+                                <select id="soup" name="soup" class="form-select" required>
+                                    <option value="">-- Выберите суп --</option>
+                                    <option value="tomato">Томатный суп с базиликом</option>
+                                    <option value="mushroom">Грибной суп-пюре (веганский)</option>
+                                    <option value="norwegian">Норвежский суп с киноа</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="main" class="form-label">Выберите главное блюдо:</label>
+                                <select id="main" name="main" class="form-select" required>
+                                    <option value="">-- Выберите главное блюдо --</option>
+                                    <option value="potatoes">Жареная картошка с шампиньонами</option>
+                                    <option value="lasagna">Веганская лазанья с тофу и соусом</option>
+                                    <option value="falafel">Фалафель с картофельным пюре</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="drink" class="form-label">Выберите напиток:</label>
+                                <select id="drink" name="drink" class="form-select" required>
+                                    <option value="">-- Выберите напиток --</option>
+                                    <option value="orange">Апельсиновый сок</option>
+                                    <option value="apple">Яблочный сок</option>
+                                    <option value="carrot">Морковный сок</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="comment" class="form-label">Комментарии к заказу:</label>
+                                <textarea id="comment" name="comment" class="form-textarea" rows="4"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-column">
+                            <h3 class="form-title">Ваши данные</h3>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Имя *</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="subscribe" name="subscribe" class="form-checkbox" checked>
+                                <label for="subscribe" class="form-label checkbox-label">Получать информацию о скидках и акциях</label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Номер телефона *</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address" class="form-label">Адрес доставки *</label>
+                                <input type="text" id="address" name="address" class="form-input" required>
+                            </div>
+
+                            <p class="form-note"><em>Доставка осуществляется только по Москве</em></p>
+
+                            <div class="form-group">
+                                <label class="form-label">Время доставки:</label>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" id="asap" name="delivery_time_option" value="asap" class="form-radio" required>
+                                        <label for="asap" class="radio-label">Как можно скорее</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="specified" name="delivery_time_option" value="specified" class="form-radio" required>
+                                        <label for="specified" class="radio-label">К указанному времени</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="delivery_time" class="form-label">Укажите время доставки</label>
+                                <input type="time" id="delivery_time" name="delivery_time" class="form-input" min="07:00" max="23:00" step="300" required>
+                            </div>
+
+                            <p class="form-note"><em>Доступное время доставки с 7:00 до 23:00</em></p>
+
+                            <div class="form-buttons">
+                                <button type="reset" class="btn btn-reset">Сбросить</button>
+                                <button type="submit" class="btn btn-submit">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacts" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+ 				<h3 class="footer-title">Контакты</h3>
+                    <p class="footer-text"><strong>Адрес:</strong> г. Москва, ул. Рижский проезд, д. 15 к.1</p>
+                    <p class="footer-text"><strong>Телефон:</strong> +7 (950) 725-25-84</p>
+                    <p class="footer-text"><strong>Email:</strong> info@greenbowl.ru</p>
+                    <p class="footer-text"><strong>Время работы:</strong> Пн-Сб: 7:00-23:00</p>
+                </div>
+
+            </div>
+            <div class="copyright">
+                <p class="copyright-text">© 2025 GreenBowl. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
