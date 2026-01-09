@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>оформить заказ — GreenBowl</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assemble.css">
+</head>
+<body>
+  <div class="page-root">
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">GreenBowl — оформить заказ</h1>
+        <nav class="main-nav" aria-label="Навигация">
+          <a href="index.html">главная</a>
+          <a href="assemble.html">собрать ланч</a>
+          <a id="active" href="checkout.html">оформить заказ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container main-content">
+      <section class="order-form-section container">
+        <h2>оформление заказа</h2>
+
+        <div id="empty-order" style="text-align:center;padding:40px;display:none;">
+          <p>Ничего не выбрано. Чтобы добавить блюда в заказ, перейдите на страницу <a href="assemble.html">Собрать ланч</a>.</p>
+        </div>
+
+        <div id="order-content">
+          <h3 style="margin-bottom:20px;">состав заказа</h3>
+          <div class="dish-grid" id="order-dishes-grid" style="margin-bottom:40px;"></div>
+
+          <form id="order-form" novalidate>
+            <div class="form-columns">
+              <div class="form-column">
+                <h3>ваш заказ</h3>
+                <div class="order-summary" id="order-summary"></div>
+              </div>
+
+              <div class="form-column">
+                <h3>ваши данные</h3>
+
+                <label for="full_name">имя</label>
+                <input type="text" id="full_name" name="full_name" required placeholder="Иван Иванов">
+
+                <label for="email">email</label>
+                <input type="email" id="email" name="email" required placeholder="ivan@example.com">
+
+                <label for="phone">телефон</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 123-45-67">
+
+                <label for="delivery_address">адрес доставки</label>
+                <input type="text" id="delivery_address" name="delivery_address" required placeholder="г. Москва, ул. Тверская, д. 15">
+
+                <div class="delivery-time">
+                  <p>время доставки</p>
+                  <label><input type="radio" name="delivery_type" value="asap" checked> как можно скорее</label><br>
+                  <label><input type="radio" name="delivery_type" value="exact"> точное время</label>
+                </div>
+
+                <label for="delivery_time">указать время</label>
+                <input type="time" id="delivery_time" name="delivery_time" min="07:00" max="23:00" step="300">
+
+                <label for="comment">комментарий к заказу</label>
+                <textarea id="comment" name="comment" rows="4" placeholder="Например: без лука, острее и т.д."></textarea>
+
+                <label>
+                  <input type="checkbox" name="subscribe" value="1" checked>
+                  согласен получать информацию о скидках и акциях
+                </label>
+              </div>
+            </div>
+
+            <div class="form-buttons">
+              <button type="reset">сбросить</button>
+              <button type="submit">отправить заказ</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Контакты: <a href="tel:+74951234567">+7 (495) 123-45-67</a> · <a href="mailto:info@greenbowl.ru">info@greenbowl.ru</a></p>
+        <p>Адрес: г. Москва, ул. Тверская, д. 15</p>
+        <p>© 2025 GreenBowl — веганская доставка</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="dishes.js"></script>
+  <script src="checkout.js"></script>
+
+  <div class="modal-overlay" id="validation-modal">
+    <div class="modal-content">
+      <img src="icons/warning.png" alt="Предупреждение">
+      <p id="modal-message"></p>
+      <button class="modal-ok-btn">окей</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Собрать ланч — GreenBowl</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assemble.css">
+</head>
+<body>
+  <div class="page-root">
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">GreenBowl — собрать ланч</h1>
+        <nav class="main-nav" aria-label="Навигация">
+          <a href="index.html">главная</a>
+          <a id="active" href="assemble.html">собрать ланч</a>
+          <a href="checkout.html">оформить заказ</a>
+          <a href="#soups">супы</a>
+          <a href="#mains">главные блюда</a>
+          <a href="#starters">салаты и стартеры</a>
+          <a href="#drinks">напитки</a>
+          <a href="#desserts">десерты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container main-content">
+
+      <section id="soups" class="dish-section">
+        <h2>супы</h2>
+        <div class="dish-filters" data-category="soup">
+          <button class="filter-btn active" data-kind="all">все</button>
+          <button class="filter-btn" data-kind="fish">рыбный</button>
+          <button class="filter-btn" data-kind="meat">мясной</button>
+          <button class="filter-btn" data-kind="veg">вегетарианский</button>
+        </div>
+        <div class="dish-grid"></div>
+      </section>
+
+      <section id="mains" class="dish-section">
+        <h2>главные блюда</h2>
+        <div class="dish-filters" data-category="main">
+          <button class="filter-btn active" data-kind="all">все</button>
+          <button class="filter-btn" data-kind="fish">рыбное</button>
+          <button class="filter-btn" data-kind="meat">мясное</button>
+          <button class="filter-btn" data-kind="veg">вегетарианское</button>
+        </div>
+        <div class="dish-grid"></div>
+      </section>
+
+      <section id="starters" class="dish-section">
+        <h2>салаты и стартеры</h2>
+        <div class="dish-filters" data-category="starter">
+          <button class="filter-btn active" data-kind="all">все</button>
+          <button class="filter-btn" data-kind="fish">рыбный</button>
+          <button class="filter-btn" data-kind="meat">мясной</button>
+          <button class="filter-btn" data-kind="veg">вегетарианский</button>
+        </div>
+        <div class="dish-grid"></div>
+      </section>
+
+      <section id="drinks" class="dish-section">
+        <h2>напитки</h2>
+        <div class="dish-filters" data-category="drink">
+          <button class="filter-btn active" data-kind="all">все</button>
+          <button class="filter-btn" data-kind="cold">холодный</button>
+          <button class="filter-btn" data-kind="hot">горячий</button>
+        </div>
+        <div class="dish-grid"></div>
+      </section>
+
+      <section id="desserts" class="dish-section">
+        <h2>десерты</h2>
+        <div class="dish-filters" data-category="dessert">
+          <button class="filter-btn active" data-kind="all">все</button>
+          <button class="filter-btn" data-kind="small">маленькая порция</button>
+          <button class="filter-btn" data-kind="medium">средняя порция</button>
+          <button class="filter-btn" data-kind="large">большая порция</button>
+        </div>
+        <div class="dish-grid"></div>
+      </section>
+
+    </main>
+
+    <section class="lunch-variants-section container">
+      <h2>доступные варианты ланча</h2>
+
+      <div class="variants-grid">
+        <div class="variant-card">
+          <div class="variant-dishes">
+            <div class="variant-dish"><img src="icons/soup.png" alt=""><p>суп 🍜</p></div>
+            <div class="variant-dish"><img src="icons/main.png" alt=""><p>главное блюдо 🍝</p></div>
+            <div class="variant-dish"><img src="icons/starter.png" alt=""><p>салат 🥗</p></div>
+            <div class="variant-dish"><img src="icons/drink.png" alt=""><p>напиток 🥤</p></div>
+          </div>
+          <p class="variant-dessert-note">десерт можно добавить к любому ланчу</p>
+        </div>
+
+        <div class="variant-card">
+          <div class="variant-dishes">
+            <div class="variant-dish"><img src="icons/soup.png" alt=""><p>суп 🍜</p></div>
+            <div class="variant-dish"><img src="icons/main.png" alt=""><p>главное блюдо 🍝</p></div>
+            <div class="variant-dish"><img src="icons/drink.png" alt=""><p>напиток 🥤</p></div>
+          </div>
+          <p class="variant-dessert-note">десерт можно добавить к любому ланчу</p>
+        </div>
+
+        <div class="variant-card">
+          <div class="variant-dishes">
+            <div class="variant-dish"><img src="icons/soup.png" alt=""><p>суп 🍜</p></div>
+            <div class="variant-dish"><img src="icons/starter.png" alt=""><p>салат 🥗</p></div>
+            <div class="variant-dish"><img src="icons/drink.png" alt=""><p>напиток 🥤</p></div>
+          </div>
+          <p class="variant-dessert-note">десерт можно добавить к любому ланчу</p>
+        </div>
+
+        <div class="variant-card">
+          <div class="variant-dishes">
+            <div class="variant-dish"><img src="icons/main.png" alt=""><p>главное блюдо 🍝</p></div>
+            <div class="variant-dish"><img src="icons/starter.png" alt=""><p>салат 🥗</p></div>
+            <div class="variant-dish"><img src="icons/drink.png" alt=""><p>напиток 🥤</p></div>
+          </div>
+          <p class="variant-dessert-note">десерт можно добавить к любому ланчу</p>
+        </div>
+
+        <div class="variant-card">
+          <div class="variant-dishes">
+            <div class="variant-dish"><img src="icons/main.png" alt=""><p>главное блюдо 🍝</p></div>
+            <div class="variant-dish"><img src="icons/drink.png" alt=""><p>напиток 🥤</p></div>
+          </div>
+          <p class="variant-dessert-note">десерт можно добавить к любому ланчу</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-form-section container">
+      <div class="form-columns">
+        <div class="form-column" id="checkout-panel-container"></div>
+      </div>
+    </section>
+
+    <footer id="contacts" class="site-footer">
+      <div class="container footer-inner">
+        <p>Контакты: <a href="tel:+74951234567">+7 (495) 123-45-67</a> · <a href="mailto:info@greenbowl.ru">info@greenbowl.ru</a></p>
+        <p>Адрес: г. Москва, ул. Тверская, д. 15</p>
+        <p>© 2025 GreenBowl — веганская доставка</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="dishes.js"></script>
+  <script src="render-dishes.js"></script>
+  <script src="assemble.js"></script>
+</body>
+</html>
